@@ -1,0 +1,21 @@
+DO NOT use reset --hard or force push yet
+git reset --soft <commit>
+git reset --hard <commit>
+git reset = rewrite history locally
+git revert = undo safely without breaking history
+
+git push --force
+#So yes, you can overwrite GitHub history, but only with force push.
+
+git init = only run git init ONCE per project
+
+Every time you make changes:
+git add .
+git commit -m "version1 or fix A"
+git push
+
+git log --oneline
+git checkout h7i8j9k
+
+git switch main
+git merge feature1
