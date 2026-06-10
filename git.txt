@@ -14,8 +14,56 @@ git add .
 git commit -m "version1 or fix A"
 git push
 
-git log --oneline
-git checkout h7i8j9k
+git status
+git branch
 
+git log (see full log)
+git log --oneline (one line more clear)
+git checkout h7i8j9k or git checkout main (almost same with git switch)
+
+//if spare current main version in branch test
 git switch main
-git merge feature1
+git pull
+git switch test or git switch -c test (c mean create, a new brand name test)
+git push
+
+//Bring changes from main into test
+git switch test
+git merge main
+//same, if merge test to main
+git switch main
+git merge test
+
+//List branches
+git branch
+//Create branch
+git branch test
+
+//Add remote repo (only used the first time you connect a local repository to a remote repository)
+git remote add origin <url>
+//View remotes
+git remote -v
+
+//fetch is before git pull
+//check if there is new update from main repo
+git fetch (if empty then no)
+//See file differences
+git diff main origin/main (main is current my local main, diff compare with repo origin/main)
+
+//after git log or git diff, type q to quit
+
+//undo all changes back to last commit, if local uncommit will not save
+git restore .
+//undo 1 file only
+git restore test.py
+//Restore specific folder
+git restore src/
+
+//temporarily Save work in local, not repo, no commit
+git stash
+//See stash list
+git stash list
+//Restore work
+git stash pop
+*after stash pop will go back the temporarily saved & delete the stash
+*use in when have unfinished work and git stash, then switch to other branch fix, after that, come back switch main, and git stash pop
