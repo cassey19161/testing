@@ -6,14 +6,30 @@ git revert = undo safely without breaking history
 
 git push --force
 #So yes, you can overwrite GitHub history, but only with force push.
-
+-----------------------------------------
 git init = only run git init ONCE per project
 
+first created new repo
+git init
+git remote add origin https://github.com/username/repo.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+*If repo already has commits on GitHub
+git clone <url>
+
+//Add remote repo (only used the first time you connect a local repository to a remote repository)
+git remote add origin <url>
+//View remotes
+git remote -v
+---------
+then
 Every time you make changes:
 git add .
 git commit -m "version1 or fix A"
 git push
-
+-----------------------------------------
 git status
 git branch
 
@@ -38,11 +54,6 @@ git merge test
 git branch
 //Create branch
 git branch test
-
-//Add remote repo (only used the first time you connect a local repository to a remote repository)
-git remote add origin <url>
-//View remotes
-git remote -v
 
 //fetch is before git pull
 //check if there is new update from main repo
