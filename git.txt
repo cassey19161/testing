@@ -14,6 +14,7 @@ git init
 git remote add origin https://github.com/username/repo.git
 git add .
 git commit -m "Initial commit"
+git branch -M main
 git push -u origin main
 ---------
 *If repo already has commits on GitHub, mean Download this whole project from GitHub and set it up on my PC
